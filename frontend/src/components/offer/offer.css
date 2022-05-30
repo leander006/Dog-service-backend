@@ -1,0 +1,47 @@
+.card{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    /* background-color: rgb(24, 34, 34); */
+    border: 1px solid rgb(55, 55, 56);
+    /* background-color: #ff4c68; */
+    font-family: 'Varela Round', sans-serif;
+}
+.card-img-top{
+
+    border-top-left-radius:20px ; 
+    border-top-right-radius: 20px;
+    padding: 10px;
+    height: 230px;
+}
+.discount{
+    font-size:20px;
+}
+.price{
+    font-size: 20px;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+.card-body h1 {
+    text-align: center;
+    color: rgb(127, 255, 127);
+    font-size: x-large;
+}
+.card-text{
+    color:rgb(110, 16, 16);
+    font-size: large;
+    margin-bottom: 20px;
+}
+.post-button {
+    width: 100px;
+    height: 35px;
+    background-color: rgb(109, 128, 0);
+    border-radius: 20px;
+    color: white;
+}
+
+.post-button .link:hover{
+    color: rgb(1, 148, 148);
+}
