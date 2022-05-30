@@ -3,21 +3,25 @@ const mongoose = require("mongoose");
 const ServiceSchema = new mongoose.Schema({
     OfferImage:{
         type:String, 
-        unique:true,
     },
-    title:{
+    offername:{
         type:String,
         required:true,
-        unique:true,
     },
     desc:{
         type:String,
         required:true,
-        unique:true,
+    },
+    offer:{
+        type:String,
+        required:true,
+    },
+    price:{
+        type:String,
+        required:true,
     },
     categories:{
         type:String,
-        unique:false
     },
 },
 {

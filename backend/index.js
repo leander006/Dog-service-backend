@@ -4,8 +4,8 @@ const cors = require('cors')
 const dotenv = require('dotenv')
 const mongoose = require('mongoose')
 const authRoute = require("./routes/auth");
-
-const usersRoute = require('./routes/users')
+const serviceRoute = require('./routes/services')
+const enrollmentRoute = require('./routes/enrollment')
 
 app.use(express.json());
 app.use(cors())
@@ -20,7 +20,11 @@ mongoose.connect(process.env.MONGO_URI
 
 app.use("/api/auth",authRoute) ;
 
-app.use("/api/users",usersRoute) ;
+// app.use("/api/users",usersRoute) ;
+
+app.use("/api/service",serviceRoute)
+
+app.use("/api/enroll",enrollmentRoute)
 
 app.get("/",(req,res) =>{
     res.send("Hello from project website")
