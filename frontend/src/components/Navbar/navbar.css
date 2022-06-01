@@ -5,7 +5,7 @@
     margin: auto;
     color: white;
     margin-right: 10px;
-    background-color: rgb(42, 55, 248);
+    background-color: rgb(252, 56, 89);
     border-radius: 10px;
 
 }
@@ -18,7 +18,7 @@
     font-size: 25px;
 }
 .right-btn:hover{
-    background-color: rgb(90, 100, 250);
+    background-color: rgb(255, 143, 161);
     border-radius: 10px;
     border-radius: 20px;
 

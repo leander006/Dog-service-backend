@@ -13,13 +13,13 @@ function WhyUs() {
                 <h1>OUR DOG CARE SERVICES?</h1>
                 <div className='why-us-2'>
 
-                <h4>Delivering the Camp Bow Wow Difference</h4>
-                <p>There are many things to consider when choosing a company that will take care of your dog and all their needs. Trust is a criticalfactor that should be at the top of every pet parent’s mind. At Camp Bow Wow®, you can rest assured that when your dog is with us,they are in safe and loving hands. Providing peace of mind for those times you can’t be with your pup is our number-one priority.</p>
+                <h4>Delivering the DogTopia Difference</h4>
+                <p>There are many things to consider when choosing a company that will take care of your dog and all their needs. Trust is a criticalfactor that should be at the top of every pet parent’s mind. At DogTopia®, you can rest assured that when your dog is with us,they are in safe and loving hands. Providing peace of mind for those times you can’t be with your pup is our number-one priority.</p>
                 </div>
                 <div className='why-us-3'>
                 <h4>What Sets Us Apart from the Rest</h4>
 
-                <p>Your dog deserves the best – they deserve the premier, all-inclusive services of Camp Bow Wow. Here, your pup can romp and play all day long, socializing with other dogs and humans. It’s no wonder pups pull their parents to our front door every time they come to Camp!</p>
+                <p>Your dog deserves the best – they deserve the premier, all-inclusive services of DogTopia. Here, your pup can romp and play all day long, socializing with other dogs and humans. It’s no wonder pups pull their parents to our front door every time they come to Camp!</p>
 
                 </div>
                 <div className='why-us-list'>

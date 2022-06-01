@@ -1,7 +1,4 @@
-import React, { useContext } from 'react'
-// import { SpinnerCircular } from 'spinners-react'
-// import { Context } from '../../Contexts/ContextProvider'
-// import Service from '../service/Service'
+import React from 'react'
 
 
 import './services.css'

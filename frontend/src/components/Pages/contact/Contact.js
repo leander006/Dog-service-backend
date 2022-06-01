@@ -29,7 +29,18 @@ function Contact() {
 
 const handleSubmit = async(e) => {
   e.preventDefault();
+  
 try {
+  if(modile.length <10){
+    toast({
+
+      description: "Length must be eqaul to 10",
+      status: 'warning',
+      duration: 2000,
+      isClosable: true,
+    })
+    return
+  }
     const config ={
         headers:{
             "Content-Type":"application/json",
@@ -123,20 +134,20 @@ console.log("path ",path);
              { service !== "Day care" && service !== "Food" &&  <div className='contact-flex'>
 
             <div className='flex-1'>
-            <h3>From</h3>
+            <h3>Appointment Time:</h3>
                 <div className="input-box">
-                  <input type="time" placeholder="from" value={from} onChange={e=>setFrom(e.target.value)}  required/>
+                  <input type="time" placeholder="Appointment time:" value={from} onChange={e=>setFrom(e.target.value)}  required/>
                 </div>
                 </div>
-                <div className='flex-2'>
+                {/* <div className='flex-2'>
                 <h3>To</h3>
                 <div className="input-box">
                   <input type="time"  value={to} onChange={e=>setTo(e.target.value)}  required/>
                 </div>
-                </div>
+                </div> */}
                 </div>}
                 </div>}
-              <h22>Additional information</h22>
+              <h22>Additional Description:</h22>
                 <div className="input-desc">
                 <textarea placeholder="If your dog has any allergy" onChange={e=>setAllergy(e.target.value)} value={allergy}  required/>
                 </div>

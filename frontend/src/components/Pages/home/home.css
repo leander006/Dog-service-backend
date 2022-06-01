@@ -12,13 +12,13 @@
       /* height: 300px; */
 }
 .upper img{
-      width: 200px;
+      width: 100vw;
       height: 400px;
 }
 
 .parallax {
       /* The image used */
-      background-image: url("../../../../public/homepage.jpeg");
+      background-image: url("../../../../public/photos/homepage.jpeg");
     
       /* Set a specific height */
       min-height: 500px; 
@@ -87,6 +87,8 @@
 .main-3 h1{
       font-family: 'Smooch Sans', sans-serif;
       color: grey;
+      font-weight:bolder;
+      font-size: 60px;
       margin-bottom: 30px;
 }
 /* <!-- Testimonials --> */

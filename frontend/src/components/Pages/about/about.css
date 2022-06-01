@@ -86,8 +86,30 @@
             text-align:center ;
       }
     }
- 
- 
+ @media screen and (max-width:1024px)  {
+     .about-lower{
+           display: flex;
+           justify-content: center;
+           flex-direction: column;
+     }
+     
+      #about-lower-img img{
+            /* margin: auto; */
+            padding: 30px 60px 0px 0px;
+            width: 1400px;
+      }
+      .about-lower-quotes{
+            font-size: 20px;
+      }
+      .about-lower-quotes h3,.about-lower-quotes h1{
+            text-align:center ;
+            font-size: 28px;
+      }
+      .about-lower-list h2{
+            font-size: 19px;
+      }
+    }   
+   
 @media screen and (max-width: 320px)  {
       .about-mid{
             padding: 0px 0px 0px 0px;

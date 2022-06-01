@@ -117,7 +117,7 @@ try {
                 <form id='form-write' className='flex flex-col'onSubmit={handleSubmit} >
                 {/* <h1>Welcome back</h1> */}
 
-                {!uploading?<img className='image-write' src={url?url:"nn.png"} alt='image'></img>: <SpinnerCircular size="90" className='spinner-write' thickness='100'  speed="400" color='red' secondaryColor="grey"/>}
+                {!uploading?<img className='image-write' src={url?url:"photos/nn.png"} alt='image'></img>: <SpinnerCircular size="90" className='spinner-write' thickness='100'  speed="400" color='red' secondaryColor="grey"/>}
                 <label htmlFor='forFile'><div className='add'><i className="fa-solid fa-2xl fa-plus" ></i></div></label>
                 <input type="file" type="file" id='forFile' accept='image/png , image/jpg, image/jpeg' style={{display:"none"}} onChange={handleImageValidation}  name="file" required />
                 <div className="button input-box">

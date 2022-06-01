@@ -6,7 +6,7 @@
       background-size: 2500px;
       width: 100%;
       background-repeat: no-repeat;
-      background-image: url('../../../../public/3.jpg');
+      background-image: url('../../../../public/photos/3.jpg');
 }
   .input-box{
     display: flex;
@@ -109,7 +109,7 @@
         background-size: 4400px;
         width: 100%;
         background-repeat: no-repeat;
-        background-image: url('../../../../public/3.jpg');
+        background-image: url('../../../../public/photos/3.jpg');
   }
  
 }
