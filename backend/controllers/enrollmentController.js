@@ -27,7 +27,7 @@ const enroll = asyncHandler(async(req,res) =>{
 // to get enrollments by id //
 const enrollmentById= asyncHandler(async(req,res) =>{
       try {
-            const enrollById = await Enroll.findById(req.params.id).populate("services").populate("username","-password");
+            const enrollById = await Enroll.findById(req.params.id).populate("offers").populate("username","-password");
             return res.status(200).json(enrollById )
       } catch (error) {
             return res.status(404).json(error)
@@ -36,7 +36,7 @@ const enrollmentById= asyncHandler(async(req,res) =>{
 // to get all Enrollments//
 const allEnrollments = asyncHandler(async(req,res) =>{
       try {
-            const enrolls = await Enroll.find({}).populate("services").populate("username","-password");
+            const enrolls = await Enroll.find({}).populate("offers").populate("username","-password");
             console.log();
             if(!enrolls){
                   return res.status(404).json("Cannot find any services")

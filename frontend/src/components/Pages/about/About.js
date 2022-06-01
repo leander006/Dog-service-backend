@@ -19,7 +19,7 @@ function About() {
 
     <h3>Leading the Way in Doggy Day Care, Boarding, & More</h3>
 
-   <p>It’s important to get to know your pup care provider, as you are trusting us with a furry member of your family. With Camp Bow Wow®, you can rest assured your dog is in the best, most qualified hands in the business. Since 2000, we have been providing fun and dependable dog care services parents and pups love.</p>
+   <p>It’s important to get to know your pup care provider, as you are trusting us with a furry member of your family. With DogTopia®, you can rest assured your dog is in the best, most qualified hands in the business. Since 2000, we have been providing fun and dependable dog care services parents and pups love.</p>
    </div>
   <div className='about-services'>
         <h4>Two of our most common services are:</h4>
@@ -36,13 +36,13 @@ function About() {
 
     <div className='about-lower'>
         <div id='about-lower-img'>
-          <img src='dd1.png'></img>
+          <img src='photos/dd1.png'></img>
         </div>
         <div className='about-lower-quotes'>
             <h3>Always Putting</h3>
             <h1>SAFETY FIRST</h1>
 
-            <p>At Camp Bow Wow, we take every step necessary to ensure your pup is in the best hands. We treat all our Campers as if they were our own and provide individualized attention and tender loving care.</p>
+            <p>At DogTopia, we take every step necessary to ensure your pup is in the best hands. We treat all our Campers as if they were our own and provide individualized attention and tender loving care.</p>
 
             <div className='about-lower-list'>
               <h2>For your comfort and reassurance, you should know that:</h2>

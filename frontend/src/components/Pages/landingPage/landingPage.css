@@ -1,5 +1,5 @@
 .landingPage{
-      background-image: url('../../../../public/landing1.jpg');
+      background-image: url('../../../../public/photos/landing1.jpg');
       background-repeat: no-repeat;
       background-size: 1900px;
       height: 100vh;
@@ -71,7 +71,7 @@
 
 @media screen and (max-width: 768px)  {
       .landingPage{
-            background-image: url('../../../../public/landing1.jpg');
+            background-image: url('../../../../public/photos/landing1.jpg');
             background-repeat: no-repeat;
             background-size: 1200px;
             height: calc(100vh - 50px);

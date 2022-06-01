@@ -137,7 +137,7 @@ const uploadImg = async (e) =>{
                 <form id='form' className='flex flex-col'onSubmit={handleSubmit} >
                 <h1>Sign In</h1>
                 <p className="sign-up-text">Have a acocunt?<Link to='/login'><span>Login now</span></Link></p>
-                {!uploading?<img className='image' src={url?url:"nn.png"} alt='image'></img>:<SpinnerCircular size="90" className='spinner-register' thickness='100'  speed="400" color='red' secondaryColor="grey"/>}
+                {!uploading?<img className='image' src={url?url:"photos/nn.png"} alt='image'></img>:<SpinnerCircular size="90" className='spinner-register' thickness='100'  speed="400" color='red' secondaryColor="grey"/>}
                 <label htmlFor='forFile'><i className="fa-solid fa-2xl fa-plus"></i></label>
                 <input type="file" type="file" id='forFile' accept='image/png , image/jpg, image/jpeg' style={{display:"none"}} onChange={handleImageValidation}  name="file" required />
                 <div className="button input-box">
@@ -149,7 +149,7 @@ const uploadImg = async (e) =>{
                 </div>
 
                 <div className="input-box">
-                <input type="text" placeholder="Enter your email" value={email} onChange={e=>setEmail(e.target.value)}  required/>
+                <input type="email" placeholder="Enter your email" value={email} onChange={e=>setEmail(e.target.value)}  required/>
                 </div>
 
                 <div className="input-box">

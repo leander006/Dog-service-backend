@@ -71,7 +71,7 @@ function Login() {
         
         description: "Login successfully",
         status: 'success',
-        duration: 700,
+        duration: 1000,
         isClosable: true,
       })
     

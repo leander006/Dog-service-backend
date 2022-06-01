@@ -55,7 +55,7 @@ function Navbar() {
         </li>
 
         <li class="nav-item">
-          <Link class="nav-link" to="/bookSession">Book</Link>
+          <Link class="nav-link" to="/bookSession">Enroll</Link>
         </li>
        
     
