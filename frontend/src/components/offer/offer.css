@@ -2,10 +2,11 @@
     margin-bottom: 20px;
     margin-top: 20px;
     border-radius: 20px;
-    /* background-color: rgb(24, 34, 34); */
     border: 1px solid rgb(55, 55, 56);
-    /* background-color: #ff4c68; */
     font-family: 'Varela Round', sans-serif;
+}
+#cards :hover{
+    cursor: pointer;
 }
 .card-img-top{
 
@@ -20,13 +21,20 @@
 .price{
     font-size: 20px;
 }
+.card i{
+    display: flex;
+    color: rgb(214, 16, 16);
+    justify-content: end;
+    padding: 24px 20px;
+}
 .flex{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    /* justify-content: space-between; */
 }
 .card-body h1 {
     text-align: center;
-    color: rgb(127, 255, 127);
+    color: rgb(0, 8, 0);
     font-size: x-large;
 }
 .card-text{

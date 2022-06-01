@@ -9,7 +9,9 @@ import { useToast } from '@chakra-ui/react'
 import './login.css'
 import Navbar from '../../Navbar/Navbar';
 import { Context } from '../../../Contexts/ContextProvider';
-// import Footer from '../../footer/Footer';
+import Footer from '../../footer/Footer';
+
+
 
 
 function Login() {
@@ -20,40 +22,19 @@ function Login() {
   const {setUser} = useContext(Context)
   const toast = useToast()
   const handleSubmit = async(e) => {
-
     e.preventDefault();
-
-    
     try {
       if(password !== cpassword){
-        return toast({
+        toast({
         
           description: "Password not matching",
           status: 'warning',
           duration: 700,
           isClosable: true,
         })
+        return
       }
-      const {data} = await axios.post("http://localhost:4003/api/auth/login", {
-        username,
-        password,
-      });
 
-   
-      localStorage.setItem("userInfo",JSON.stringify(data));
-
-      setUser(data)
-      navigate('/home');
-      toast({
-        
-        description: "Login successfully",
-        status: 'success',
-        duration: 700,
-        isClosable: true,
-      })
-    
-    } catch (err) {
-     
       if(!username)
       {
         toast({
@@ -74,16 +55,35 @@ function Login() {
       })
       return
       }
-      else{
+
+
+      const {data} = await axios.post("http://localhost:4003/api/auth/login", {
+        username,
+        password,
+      });
+
+   
+      localStorage.setItem("userInfo",JSON.stringify(data));
+
+      setUser(data)
+      navigate('/home');
+      toast({
+        
+        description: "Login successfully",
+        status: 'success',
+        duration: 700,
+        isClosable: true,
+      })
+    
+    } catch (err) {
       toast({
 
-        description: "Wrong Credentials",
+        description: err?.response?.data?.message,
         status: 'warning',
         duration: 700,
         isClosable: true,
       })
-    }
-  
+    console.log("login",err?.response?.data?.message);
     }
   };
 
@@ -114,7 +114,7 @@ function Login() {
             </div>
         </div>
 
-
+<Footer/>
     </>
   )
 }

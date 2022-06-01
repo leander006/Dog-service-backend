@@ -4,7 +4,7 @@ const cors = require('cors')
 const dotenv = require('dotenv')
 const mongoose = require('mongoose')
 const authRoute = require("./routes/auth");
-const serviceRoute = require('./routes/services')
+const OfferRoute = require('./routes/Offer')
 const enrollmentRoute = require('./routes/enrollment')
 
 app.use(express.json());
@@ -22,7 +22,7 @@ app.use("/api/auth",authRoute) ;
 
 // app.use("/api/users",usersRoute) ;
 
-app.use("/api/service",serviceRoute)
+app.use("/api/offer",OfferRoute)
 
 app.use("/api/enroll",enrollmentRoute)
 

@@ -4,9 +4,9 @@ import { SpinnerCircular } from 'spinners-react'
 import { Context } from '../../../Contexts/ContextProvider'
 import Footer from '../../footer/Footer'
 import Navbar from '../../Navbar/Navbar'
-import Services from '../../offers/Offers'
-
-function Offers() {
+import Offers from '../../offers/Offers'
+import './offer.css'
+function Offerses() {
 
   const {user} = useContext(Context)
   const [offers, setOffers] = useState([])
@@ -19,10 +19,9 @@ function Offers() {
               Authorization:`Bearer ${JSON.parse(localStorage.getItem("userInfo"))?.token}`
           }
         }
-        const posts = await axios.get("http://localhost:4003/api/service",config)
+        const posts = await axios.get("http://localhost:4003/api/offer",config)
         setUploading(true)
-        setOffers(posts.data)
-        // setUploading(false)   
+        setOffers(posts.data) 
     }
     getOffers()
     setUploading(false)
@@ -31,10 +30,13 @@ function Offers() {
   return (
     <>
       <Navbar/>
-      {uploading?<Offers offers={offers}/>:<SpinnerCircular size="90" className='spinner-register' thickness='100'  speed="400" color='red' secondaryColor="grey"/>}
+      <div className='offer'>      
+        {uploading?<Offers offers={offers}/>:<SpinnerCircular size="90" className='spinner-register' thickness='100'  speed="400" color='red' secondaryColor="grey"/>}
+      </div>
+
       <Footer/>
     </>
   )
 }
 
-export default Offers
+export default Offerses

@@ -6,7 +6,7 @@ const {enroll,enrollmentById,allEnrollments,} = require('../controllers/enrollme
 const {protect} = require("../middleware/authMiddileware")
 
 
-router.post("/:id",protect,enroll)
+router.post("/",protect,enroll)
 
 router.get("/",protect,allEnrollments)
 

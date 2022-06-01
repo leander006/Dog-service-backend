@@ -1,5 +1,6 @@
 import React from 'react'
 import {useNavigate } from 'react-router-dom'
+import Footer from '../../footer/Footer';
 import Navbar from '../../Navbar/Navbar'
 import "./landingPage.css"
 function LandingPage() {
@@ -34,7 +35,7 @@ function LandingPage() {
         </div>
         </div>
         
-    
+    <Footer/>
     </>
   )
 }

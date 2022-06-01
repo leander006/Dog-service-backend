@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const ServiceSchema = new mongoose.Schema({
+const OfferSchema = new mongoose.Schema({
     OfferImage:{
         type:String, 
     },
@@ -12,7 +12,7 @@ const ServiceSchema = new mongoose.Schema({
         type:String,
         required:true,
     },
-    offer:{
+    discount:{
         type:String,
         required:true,
     },
@@ -20,13 +20,10 @@ const ServiceSchema = new mongoose.Schema({
         type:String,
         required:true,
     },
-    categories:{
-        type:String,
-    },
 },
 {
     timestamps:true
 }
 );
 
-module.exports =  mongoose.model("Service",ServiceSchema);
+module.exports =  mongoose.model("Offer",OfferSchema);
