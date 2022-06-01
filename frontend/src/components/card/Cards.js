@@ -1,11 +1,11 @@
 import React from 'react'
-
+import './card.css'
 function Cards() {
   return (
       <div className='container'>
       <div className='row'>
       <div className='col-sm-6 col-lg-3 '>
-      <div className="card" id='card'>
+      <div className="card" id='card' >
         <div className="card-body">
         <img src='medic.jpeg'></img>
           <div className="card-title">SAFETY FIRST</div>

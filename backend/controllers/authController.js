@@ -55,13 +55,12 @@ const login =asyncHandler(async(req,res)=>{
     try {
         if(!username || !req.body.password )
         {
-            
             return res.status(402).json("Please all field")
         }
         const user = await User.findOne({username});
         if(!user)
         {
-            return res.status(400).json("User does not exits!");
+            return res.status(400).json({message:"User does not exits!"});
         }
         const validate = await bcrypt.compare(req.body.password,user.password)
         if(!validate)

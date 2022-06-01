@@ -5,7 +5,7 @@ import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { SpinnerCircular } from 'spinners-react';
 import { Context } from '../../../Contexts/ContextProvider';
-// import Footer from '../../footer/Footer'
+import Footer from '../../footer/Footer'
 import Navbar from '../../Navbar/Navbar'
 import './write.css'
 
@@ -15,7 +15,7 @@ function Write() {
 
     const [offername, setOffername] = useState("");
     const [desc, setDesc] = useState("");
-    const [offer, setOffer] = useState("");
+    const [discount, setDiscount] = useState("");
     const [price, setPrice] = useState("")
     const [select, setSelect] = useState("");
     const [img, setImg] = useState(null);
@@ -86,22 +86,22 @@ try {
             Authorization:`Bearer ${JSON.parse(localStorage.getItem("userInfo"))?.token}`
         }
       }
-    const {data} = await axios.post("http://localhost:4003/api/service",{offername, desc,offer,price, categories:select,OfferImage:url},config);
+    await axios.post("http://localhost:4003/api/offer",{offername, desc,discount,price,OfferImage:url},config);
     toast({
 
-      description: "Post uploaded successfully",
+      description: "Uploaded successfully",
       status: 'success',
-      duration: 5000,
+      duration: 2000,
       isClosable: true,
     })
-    navigate('/');
+    navigate('/home');
   
 }catch (err) {
   console.log(err);
     toast({
       description: err.message,
       status: 'warning',
-      duration: 5000,
+      duration: 3000,
       isClosable: true,
     })
   }
@@ -121,7 +121,7 @@ try {
                 <label htmlFor='forFile'><div className='add'><i className="fa-solid fa-2xl fa-plus" ></i></div></label>
                 <input type="file" type="file" id='forFile' accept='image/png , image/jpg, image/jpeg' style={{display:"none"}} onChange={handleImageValidation}  name="file" required />
                 <div className="button input-box">
-                <input type="submit" value="Upload Image" onClick={uploadImg} />
+                <input type="submit" id='button' value="Upload Image" onClick={uploadImg} />
               </div>
                 <div className="input-box">
                   <input type="text" placeholder="Offer name" value={offername} onChange={e=>setOffername(e.target.value)}  required/>
@@ -142,21 +142,28 @@ try {
 
                   
                 <div className="input-box">
-                  <input type="text" placeholder="Enter discount " value={offer} onChange={e=>setOffer(e.target.value)}  required/>
+                  <input type="text" placeholder="Enter discount " value={discount} onChange={e=>setDiscount(e.target.value)}  required/>
                 </div>
                 </div>
-              <select name="opt" onChange={e=>setSelect(e.target.value)} >
+              {/* <select name="opt" onChange={e=>setSelect(e.target.value)} >
               <option value="null">Select any one Category</option>
-                <option value="Day care">Day care</option>
-                <option value="Pedicure">Pedicure</option>
-                <option value="Menicure">Menicure</option>
-            </select>
+              <option value="null">Select your dog breed</option>
+                <option value="German shepherd">German shepherd</option>
+                <option value="Labrador retriever">Labrador retriever</option>
+                <option value="Poodle">Poodle</option>
+                <option value="Golden retriever">Golden retriever</option>
+                <option value="Bulldog">Bulldog</option>
+                <option value="French bulldog">French bulldog</option>
+                <option value="Siberian husky">Siberian husky</option>
+                <option value="Pug">Pug</option>
+                <option value="Cavalier king charles spaniel">Cavalier king charles spaniel</option>
+            </select> */}
                     <button className='btn'>Add service</button>
                 </form>
     
             </div>
         </div>
-    {/* <Footer/> */}
+    <Footer/>
     </>
   )
 }

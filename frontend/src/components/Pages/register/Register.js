@@ -6,6 +6,7 @@ import './register.css'
 import { SpinnerCircular } from 'spinners-react';
 import { Link, useNavigate } from 'react-router-dom';
 import Navbar from '../../Navbar/Navbar';
+import Footer from '../../footer/Footer';
 function Register() {
   const navigate = useNavigate();
   const [username,setUsername]=useState("");
@@ -45,14 +46,13 @@ const uploadImg = async (e) =>{
   }
   const data = new FormData();
   data.append("file",img)
-  data.append("upload_preset","collegeProject")
   setUploading(true)
+  data.append("upload_preset","collegeProject")
   fetch("https://api.cloudinary.com/v1_1/dj-sanghvi-college/image/upload",{
     method:'post',
     body:data
   }).then((res) => res.json())
     .then((data) =>{
-      setUploading(true)
       seturl(data.url)
       toast({
 
@@ -61,6 +61,7 @@ const uploadImg = async (e) =>{
         duration: 5000,
         isClosable: true,
       })
+      setUploading(false)
     }).catch((err) =>{
       setUploading(false)
       console.log(err);
@@ -140,7 +141,7 @@ const uploadImg = async (e) =>{
                 <label htmlFor='forFile'><i className="fa-solid fa-2xl fa-plus"></i></label>
                 <input type="file" type="file" id='forFile' accept='image/png , image/jpg, image/jpeg' style={{display:"none"}} onChange={handleImageValidation}  name="file" required />
                 <div className="button input-box">
-                <input type="submit" value="Upload Image" onClick={uploadImg} />
+                <input type="submit" id='button' value="Upload Image" onClick={uploadImg} />
               </div>
               
                 <div className="input-box">
@@ -159,7 +160,7 @@ const uploadImg = async (e) =>{
 
             </div>
         </div>
-{/* <Footer/> */}
+<Footer/>
 </>
   )
 }
