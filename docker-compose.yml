@@ -1,0 +1,18 @@
+version: "3"
+services:
+  app:
+    build: .
+    ports:
+      - "4003:4003"
+    depends_on:
+      - mongodb
+    environment:
+      - MONGO_URI=${MONGO_URI}
+      - PORT=${PORT}
+      - JWT_KEY=${JWT_KEY}
+    env_file:
+      - .env
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"

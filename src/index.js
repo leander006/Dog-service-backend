@@ -4,7 +4,7 @@ const cors = require("cors");
 
 const mongoose = require("mongoose");
 const authRoute = require("./routes/auth");
-const OfferRoute = require("./routes/Offer");
+const OfferRoute = require("./routes/offer");
 const enrollmentRoute = require("./routes/enrollment");
 const { MONGO_URI, PORT } = require("./config/serverConfig");
 
